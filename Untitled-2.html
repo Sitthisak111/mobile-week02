@@ -1,10 +1,1656 @@
 <!DOCTYPE html>
-<html lang="th">
-<head><meta charset="UTF-8"><title>week02</title></head>
-<body>
-<h1>หน้าแนะนำตัว</h1>
-<p>ชื่อเล่น: ...</p>
-<p>สาขา: ...</p>
-<p>ร้านโครงงาน: ...</p>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROYAL EQUINE | Haute Équestre & Stud Farm - ตลาดม้าสายพันธุ์แท้ระดับพรีเมียม (Week 02)</title>
+    
+    <!-- Google Fonts: Cinzel, Playfair Display & Prompt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,600&family=Prompt:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        prompt: ['Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        gold: {
+                            100: '#fcf6ea',
+                            200: '#f7e7c4',
+                            300: '#efd194',
+                            400: '#e5b863',
+                            500: '#d4a038', // Pure Antique Champagne Gold
+                            600: '#b88225',
+                            700: '#94631c',
+                            800: '#774d1c',
+                            900: '#623f1a',
+                        },
+                        obsidian: {
+                            800: '#151916',
+                            900: '#0c0f0d',
+                            950: '#060807', // Ultra-deep Obsidian Charcoal
+                        },
+                        emeraldDeep: {
+                            900: '#071610',
+                            950: '#030d09',
+                        }
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 0 25px rgba(212, 160, 56, 0.22)',
+                        'gold-glow-lg': '0 0 50px rgba(212, 160, 56, 0.35)',
+                        'card-luxury': '0 20px 40px -15px rgba(0, 0, 0, 0.7)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #060807;
+            color: #e5e5e5;
+            overflow-x: hidden;
+        }
+        
+        .font-royal {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 0.08em;
+        }
+
+        .font-editorial {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        /* Gold Foil Gradients */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fff2db 0%, #d4a038 45%, #f9e2ab 70%, #9e6f1a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-border-gradient {
+            border-image: linear-gradient(to right, #9e6f1a, #f9e2ab, #d4a038, #9e6f1a) 1;
+        }
+
+        .gold-shimmer {
+            background: linear-gradient(90deg, rgba(212,160,56,0) 0%, rgba(247,231,196,0.25) 50%, rgba(212,160,56,0) 100%);
+            background-size: 200% 100%;
+            animation: shimmer 4s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #060807;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #774d1c, #d4a038, #774d1c);
+            border-radius: 4px;
+        }
+
+        /* Ambient Luxury Glow Backgrounds */
+        .ambient-radial-gold {
+            background: radial-gradient(circle at 50% 20%, rgba(212, 160, 56, 0.12) 0%, rgba(6, 8, 7, 0) 70%);
+        }
+
+        .ambient-radial-emerald {
+            background: radial-gradient(circle at 80% 80%, rgba(10, 40, 25, 0.25) 0%, rgba(6, 8, 7, 0) 70%);
+        }
+
+        /* Luxury Glass Card */
+        .glass-dark {
+            background: rgba(14, 18, 15, 0.75);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 160, 56, 0.18);
+        }
+
+        .glass-dark-hover:hover {
+            border-color: rgba(212, 160, 56, 0.45);
+            box-shadow: 0 10px 30px -10px rgba(212, 160, 56, 0.2);
+        }
+
+        .gold-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(212, 160, 56, 0.6) 50%, transparent 100%);
+        }
+
+        /* Watermark Crest */
+        .crest-watermark {
+            position: absolute;
+            opacity: 0.03;
+            pointer-events: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-obsidian-950">
+
+    <!-- 0. VIP CURATOR & WEEK 02 ACADEMIC DOSSIER (แถบข้อมูลผู้จัดทำระดับเอ็กเซกคิวทีฟ) -->
+    <section class="bg-obsidian-950 border-b border-gold-500/20 text-xs py-2 px-4 relative z-50">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+            
+            <!-- Left: Week 02 Dossier Badge -->
+            <div class="flex flex-wrap items-center justify-center md:justify-start gap-2.5">
+                <span class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-gold-500/10 text-gold-300 font-cinzel text-[11px] font-semibold border border-gold-500/30">
+                    <i data-lucide="award" class="w-3.5 h-3.5 text-gold-400"></i>
+                    <span>ACADEMIC DOSSIER • WEEK 02</span>
+                </span>
+                
+                <span class="text-stone-500 hidden sm:inline">|</span>
+                
+                <div class="flex items-center gap-1.5 text-stone-300 bg-obsidian-900/90 px-3 py-0.5 rounded border border-gold-500/15">
+                    <span class="text-stone-400">ผู้จัดทำ:</span>
+                    <strong id="studentNickname" class="text-gold-200 font-medium">ต้นกล้า (Tonkla)</strong>
+                    <button onclick="editDossier('studentNickname', 'ชื่อเล่นผู้จัดทำ')" class="text-stone-400 hover:text-gold-300 ml-1" title="แก้ไขชื่อ">
+                        <i data-lucide="edit-2" class="w-3 h-3"></i>
+                    </button>
+                </div>
+
+                <div class="flex items-center gap-1.5 text-stone-300 bg-obsidian-900/90 px-3 py-0.5 rounded border border-gold-500/15">
+                    <span class="text-stone-400">สาขา:</span>
+                    <strong id="studentMajor" class="text-gold-200 font-medium">วิทยาการคอมพิวเตอร์และนวัตกรรมดิจิทัล</strong>
+                    <button onclick="editDossier('studentMajor', 'สาขาวิชา')" class="text-stone-400 hover:text-gold-300 ml-1" title="แก้ไขสาขา">
+                        <i data-lucide="edit-2" class="w-3 h-3"></i>
+                    </button>
+                </div>
+
+                <div class="hidden lg:flex items-center gap-1.5 text-stone-300 bg-obsidian-900/90 px-3 py-0.5 rounded border border-gold-500/15">
+                    <span class="text-stone-400">ร้านโครงงาน:</span>
+                    <strong class="text-emerald-400 font-medium flex items-center gap-1">
+                        <i data-lucide="sparkles" class="w-3 h-3 text-gold-400"></i> Royal Equine (ร้านขายม้าเกรดซูเปอร์พรีเมียม)
+                    </strong>
+                </div>
+            </div>
+
+            <!-- Right: International Currency Switcher & Global Contact -->
+            <div class="flex items-center gap-4 text-[11px] text-stone-400">
+                <!-- Currency Selector -->
+                <div class="flex items-center gap-1.5 bg-obsidian-900 px-2 py-0.5 rounded border border-stone-800 text-stone-300">
+                    <i data-lucide="coins" class="w-3 h-3 text-gold-400"></i>
+                    <span>สกุลเงิน:</span>
+                    <select id="currencySelect" onchange="changeCurrency(this.value)" class="bg-transparent text-gold-300 font-semibold focus:outline-none cursor-pointer">
+                        <option value="THB" class="bg-obsidian-900 text-white">THB (฿)</option>
+                        <option value="USD" class="bg-obsidian-900 text-white">USD ($)</option>
+                        <option value="EUR" class="bg-obsidian-900 text-white">EUR (€)</option>
+                    </select>
+                </div>
+
+                <span class="hidden sm:inline-flex items-center gap-1 text-stone-300">
+                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gold-400"></i> FEI Certified
+                </span>
+                
+                <a href="#contact" class="text-gold-400 hover:text-gold-200 font-medium transition flex items-center gap-1">
+                    <span>VIP Concierge</span>
+                    <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. HAUTE ÉQUESTRE FLOATING NAVBAR -->
+    <header class="sticky top-0 z-40 bg-obsidian-950/90 backdrop-blur-xl border-b border-gold-500/20 shadow-2xl transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-24">
+                
+                <!-- Royal Brand Crest & Monogram -->
+                <a href="#" class="flex items-center gap-3.5 group">
+                    <div class="relative w-13 h-13 p-0.5 rounded-full bg-gradient-to-tr from-gold-700 via-gold-400 to-gold-200 shadow-gold-glow group-hover:scale-105 transition-transform duration-500">
+                        <div class="w-12 h-12 rounded-full bg-obsidian-950 flex items-center justify-center">
+                            <!-- Royal Pegasus Emblem SVG -->
+                            <svg class="w-7 h-7 text-gold-300 fill-current" viewBox="0 0 24 24">
+                                <path d="M20.5 8c-.3-2.1-1.8-3.9-3.8-4.6-2.1-.7-4.4-.1-6 1.4L9 6.5C7.7 5.6 6 5.3 4.5 5.8 3.4 6.2 2.5 7.1 2 8.2c-.4 1-.4 2.1 0 3.1.5 1.2 1.5 2.1 2.7 2.5l.3.1c-.2.7-.2 1.5 0 2.2l.6 1.9c.4 1.2 1.4 2.1 2.6 2.4 1.4.3 2.9-.2 3.8-1.3l.9-1.1 1.6.7c1.3.6 2.8.4 3.9-.4 1.2-.9 1.8-2.3 1.8-3.8l.3-6.5zM6.5 9c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="font-cinzel text-2xl font-bold tracking-[0.2em] text-white block leading-none">ROYAL EQUINE</span>
+                        <div class="flex items-center gap-2 mt-1">
+                            <span class="text-[9px] font-cinzel tracking-[0.3em] text-gold-400 uppercase font-semibold">HAUTE ÉQUESTRE</span>
+                            <span class="w-1 h-1 rounded-full bg-gold-400"></span>
+                            <span class="text-[9px] tracking-widest text-stone-400 uppercase">STUD FARM 1886</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Desktop Haute Horlogerie Style Navigation -->
+                <nav class="hidden lg:flex items-center gap-8 text-[13px] font-cinzel tracking-wider text-stone-300">
+                    <a href="#hero" class="hover:text-gold-300 transition-colors">THE ESTATE</a>
+                    <a href="#featured-breeds" class="hover:text-gold-300 transition-colors">BLOODLINES</a>
+                    <a href="#horse-catalog" class="text-gold-300 hover:text-white transition-colors font-bold flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse"></span>
+                        <span>THE COLLECTION</span>
+                    </a>
+                    <a href="#facilities" class="hover:text-gold-300 transition-colors">SANCTUARY</a>
+                    <a href="#reviews" class="hover:text-gold-300 transition-colors">PATRONS</a>
+                    <a href="#contact" class="hover:text-gold-300 transition-colors">CONCIERGE</a>
+                </nav>
+
+                <!-- Actions: Wishlist & Private Viewing CTA -->
+                <div class="flex items-center gap-4">
+                    <!-- Wishlist Drawer Trigger -->
+                    <button id="openWishlistBtn" class="relative p-2.5 rounded-full bg-obsidian-900 border border-gold-500/30 text-stone-300 hover:text-gold-300 hover:border-gold-400 transition" title="คอลเลกชันม้าที่เลือก">
+                        <i data-lucide="heart" class="w-4 h-4"></i>
+                        <span id="wishlistCountBadge" class="absolute -top-1 -right-1 bg-gradient-to-r from-gold-600 to-gold-400 text-obsidian-950 text-[10px] font-bold w-4.5 h-4.5 rounded-full flex items-center justify-center scale-0 transition-transform">0</span>
+                    </button>
+
+                    <!-- Private Viewing CTA Button -->
+                    <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-cinzel tracking-widest font-bold text-obsidian-950 bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 hover:from-gold-200 hover:to-gold-400 shadow-gold-glow hover:shadow-gold-glow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                        <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+                        <span>PRIVATE VIEWING</span>
+                    </a>
+
+                    <!-- Mobile Menu Hamburger -->
+                    <button id="mobileMenuBtn" class="lg:hidden p-2 text-stone-300 hover:text-gold-300">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-gold-500/20 bg-obsidian-950/98 px-6 py-6 space-y-4 font-cinzel text-sm tracking-wider">
+            <a href="#hero" class="block py-1.5 text-stone-300 hover:text-gold-300 mobile-nav-link">THE ESTATE (หน้าแรก)</a>
+            <a href="#featured-breeds" class="block py-1.5 text-stone-300 hover:text-gold-300 mobile-nav-link">BLOODLINES (สายพันธุ์เด่น)</a>
+            <a href="#horse-catalog" class="block py-1.5 text-gold-300 font-bold mobile-nav-link">THE COLLECTION (ม้าพร้อมจำหน่าย)</a>
+            <a href="#facilities" class="block py-1.5 text-stone-300 hover:text-gold-300 mobile-nav-link">SANCTUARY (มาตรฐานฟาร์ม)</a>
+            <a href="#reviews" class="block py-1.5 text-stone-300 hover:text-gold-300 mobile-nav-link">PATRONS (เสียงสะท้อนจากเจ้าของม้า)</a>
+            <a href="#contact" class="block py-1.5 text-stone-300 hover:text-gold-300 mobile-nav-link">CONCIERGE (นัดหมายส่วนตัว)</a>
+            <a href="#contact" class="w-full flex items-center justify-center gap-2 py-3 mt-4 rounded-xl font-bold text-xs bg-gold-400 text-obsidian-950">
+                <i data-lucide="calendar" class="w-4 h-4"></i> BOOK PRIVATE VIEWING
+            </a>
+        </div>
+    </header>
+
+    <!-- 2. ULTRA-PREMIUM CINEMATIC HERO SECTION -->
+    <section id="hero" class="relative min-h-[92vh] flex items-center justify-center overflow-hidden ambient-radial-gold">
+        
+        <!-- Background Hero with High-Contrast Editorial Cinematic Look -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=2160&q=85" 
+                 alt="Friesian Royal Stallion" 
+                 class="w-full h-full object-cover object-center opacity-35 scale-100 filter brightness-90 contrast-125">
+            <!-- Luxury Vignette Layers -->
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/70 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-obsidian-950 via-obsidian-950/60 to-obsidian-950/90"></div>
+            <div class="absolute inset-0 hero-pattern opacity-25"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+            
+            <!-- Royal Crest Emblem -->
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold-500/10 border border-gold-500/40 text-gold-300 mb-6 shadow-gold-glow mx-auto">
+                <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 2l2.4 4.8 5.3.8-3.8 3.7.9 5.3-4.8-2.5-4.8 2.5.9-5.3-3.8-3.7 5.3-.8L12 2z"/>
+                </svg>
+            </div>
+
+            <!-- Pre-Headline Editorial Tag -->
+            <div class="flex items-center justify-center gap-3 mb-4">
+                <div class="w-12 h-[1px] bg-gradient-to-r from-transparent to-gold-400"></div>
+                <span class="font-cinzel text-xs sm:text-sm tracking-[0.35em] text-gold-300 uppercase font-semibold">L'ART DE LA PERFECTION ÉQUESTRE</span>
+                <div class="w-12 h-[1px] bg-gradient-to-l from-transparent to-gold-400"></div>
+            </div>
+
+            <!-- Hero Main Title -->
+            <h1 class="font-editorial text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] mb-6 max-w-4xl mx-auto">
+                ส่งต่อเอกสิทธิ์แห่งอาชา <br>
+                <span class="gold-gradient-text italic font-serif">สายเลือดแชมเปี้ยนเหนือกาลเวลา</span>
+            </h1>
+
+            <p class="font-prompt text-stone-300 text-sm sm:text-base lg:text-lg font-light leading-relaxed mb-10 max-w-2xl mx-auto">
+                แหล่งเพาะพันธุ์และนำเข้าม้าสายเลือดแท้ระดับ Masterpiece ผ่านการคัดสรรสรีรวิทยา จิตประสาท และประวัติการแข่งขันระดับโอลิมปิก เอกสารรับรอง Pedigree สากล พร้อมการตรวจสุขภาพขั้นสูงสุด
+            </p>
+
+            <!-- Dual Luxury CTA -->
+            <div class="flex flex-wrap items-center justify-center gap-5 mb-16">
+                <a href="#horse-catalog" class="px-8 py-4 rounded-full text-xs sm:text-sm font-cinzel font-bold tracking-widest text-obsidian-950 bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 hover:from-gold-200 hover:to-gold-300 shadow-gold-glow hover:shadow-gold-glow-lg transition duration-300 transform hover:-translate-y-1">
+                    EXPLORE THE COLLECTION (เลือกชมม้า)
+                </a>
+                <a href="#contact" class="px-8 py-4 rounded-full text-xs sm:text-sm font-cinzel tracking-widest text-gold-300 hover:text-white glass-dark border border-gold-500/40 hover:border-gold-400 transition duration-300">
+                    REQUEST PRIVATE VIEWING (นัดชมฟาร์ม)
+                </a>
+            </div>
+
+            <!-- Ticker Stats of Heritage -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-10 border-t border-gold-500/20">
+                <div class="text-center">
+                    <p class="font-cinzel text-3xl sm:text-4xl font-bold gold-gradient-text">45+</p>
+                    <p class="font-cinzel text-[10px] tracking-widest text-stone-400 uppercase mt-1">HORSES AVAILABLE</p>
+                </div>
+                <div class="text-center">
+                    <p class="font-cinzel text-3xl sm:text-4xl font-bold gold-gradient-text">100%</p>
+                    <p class="font-cinzel text-[10px] tracking-widest text-stone-400 uppercase mt-1">CERTIFIED PEDIGREE</p>
+                </div>
+                <div class="text-center">
+                    <p class="font-cinzel text-3xl sm:text-4xl font-bold gold-gradient-text">FEI</p>
+                    <p class="font-cinzel text-[10px] tracking-widest text-stone-400 uppercase mt-1">OLYMPIC STANDARDS</p>
+                </div>
+                <div class="text-center">
+                    <p class="font-cinzel text-3xl sm:text-4xl font-bold gold-gradient-text">1886</p>
+                    <p class="font-cinzel text-[10px] tracking-widest text-stone-400 uppercase mt-1">HERITAGE STUDBOOK</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Gold Edge -->
+        <div class="gold-divider absolute bottom-0 inset-x-0"></div>
+    </section>
+
+    <!-- 3. MARQUEE PRESTIGE RIBBON -->
+    <div class="bg-obsidian-900 border-b border-gold-500/20 py-3 overflow-hidden text-stone-400 text-[11px] font-cinzel tracking-[0.25em] uppercase select-none">
+        <div class="flex items-center justify-around gap-8 whitespace-nowrap opacity-75">
+            <span>✦ HARAS DE PRESTIGE</span>
+            <span>✦ STRAIGHT EGYPTIAN ARABIAN</span>
+            <span>✦ KFPS FRIESIAN ROYAL STUDBOOK</span>
+            <span>✦ KWPN WARMBLOOD OLYMPIANS</span>
+            <span>✦ ANCCE PURE SPANISH HORSE</span>
+            <span>✦ PRIVATE EQUINE JET TRANSPORT</span>
+            <span>✦ PRE-PURCHASE VET ASSURANCE</span>
+        </div>
+    </div>
+
+    <!-- 4. SIGNATURE BLOODLINES (สายพันธุ์มรดกโลก) -->
+    <section id="featured-breeds" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="font-cinzel text-xs tracking-[0.3em] text-gold-400 uppercase font-semibold block mb-2">ROYAL BLOODLINES</span>
+            <h2 class="font-editorial text-3xl sm:text-5xl font-bold text-white">สายพันธุ์มรดกแห่งเกียรติยศ</h2>
+            <div class="w-20 h-0.5 bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mt-4 mb-4"></div>
+            <p class="text-stone-400 text-sm font-light">
+                ม้าทุกสายพันธุ์ได้รับการจดทะเบียนสายเลือดโดยตรงกับสมาคมระดับโลก มีประวัติสืบสายพันธุ์ย้อนหลังกว่า 4 ชั่วอายุ
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Breed 1: Friesian -->
+            <div class="group relative rounded-2xl overflow-hidden glass-dark glass-dark-hover transition-all duration-500 cursor-pointer transform hover:-translate-y-2" onclick="filterByQuickBreed('Friesian')">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=700&q=80" 
+                         alt="Friesian" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-80 group-hover:opacity-100">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/40 to-transparent flex flex-col justify-end p-6">
+                    <span class="font-cinzel text-[10px] tracking-widest text-gold-400 uppercase font-bold">THE NETHERLANDS • KFPS</span>
+                    <h3 class="font-editorial text-2xl font-bold text-white mt-1">Friesian Horse</h3>
+                    <p class="text-stone-400 text-xs mt-2 line-clamp-2">"ไข่มุกดำแห่งเนเธอร์แลนด์" ขนแผงคอดกหนา ก้าวย่างทรงพลัง สำหรับ Dressage และงานพิธีการระดับประเทศ</p>
+                    <span class="font-cinzel text-xs text-gold-300 font-semibold mt-4 flex items-center gap-1 group-hover:translate-x-1 transition">
+                        <span>EXPLORE FRIESIANS</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-gold-400"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Breed 2: Arabian -->
+            <div class="group relative rounded-2xl overflow-hidden glass-dark glass-dark-hover transition-all duration-500 cursor-pointer transform hover:-translate-y-2" onclick="filterByQuickBreed('Arabian')">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=700&q=80" 
+                         alt="Arabian" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-80 group-hover:opacity-100">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/40 to-transparent flex flex-col justify-end p-6">
+                    <span class="font-cinzel text-[10px] tracking-widest text-gold-400 uppercase font-bold">ARABIAN DESERT • WAHO</span>
+                    <h3 class="font-editorial text-2xl font-bold text-white mt-1">Purebred Arabian</h3>
+                    <p class="text-stone-400 text-xs mt-2 line-clamp-2">โครงหน้าเว้าคมชัด ดวงตากลมโต หางชูสูง ปราดเปรียว สง่างาม ความอดทนเป็นเลิศระดับประกวดสากล</p>
+                    <span class="font-cinzel text-xs text-gold-300 font-semibold mt-4 flex items-center gap-1 group-hover:translate-x-1 transition">
+                        <span>EXPLORE ARABIANS</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-gold-400"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Breed 3: KWPN Warmblood -->
+            <div class="group relative rounded-2xl overflow-hidden glass-dark glass-dark-hover transition-all duration-500 cursor-pointer transform hover:-translate-y-2" onclick="filterByQuickBreed('Warmblood')">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1534773728080-33d31da27ae5?auto=format&fit=crop&w=700&q=80" 
+                         alt="Warmblood" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-80 group-hover:opacity-100">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/40 to-transparent flex flex-col justify-end p-6">
+                    <span class="font-cinzel text-[10px] tracking-widest text-gold-400 uppercase font-bold">GERMANY / HOLLAND • FEI</span>
+                    <h3 class="font-editorial text-2xl font-bold text-white mt-1">Dutch Warmblood</h3>
+                    <p class="text-stone-400 text-xs mt-2 line-clamp-2">เจ้าแห่งกีฬาขี่ม้ากระโดดโอลิมปิก พลังเทคออฟยอดเยี่ยม ควบคุมทิศทางและจังหวะแม่นยำสูงสุด</p>
+                    <span class="font-cinzel text-xs text-gold-300 font-semibold mt-4 flex items-center gap-1 group-hover:translate-x-1 transition">
+                        <span>EXPLORE WARMBLOODS</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-gold-400"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Breed 4: Andalusian / P.R.E -->
+            <div class="group relative rounded-2xl overflow-hidden glass-dark glass-dark-hover transition-all duration-500 cursor-pointer transform hover:-translate-y-2" onclick="filterByQuickBreed('Andalusian')">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1547407139-3c921a66005c?auto=format&fit=crop&w=700&q=80" 
+                         alt="Andalusian" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-80 group-hover:opacity-100">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/40 to-transparent flex flex-col justify-end p-6">
+                    <span class="font-cinzel text-[10px] tracking-widest text-gold-400 uppercase font-bold">SPAIN • ANCCE CERTIFIED</span>
+                    <h3 class="font-editorial text-2xl font-bold text-white mt-1">Pure Spanish (P.R.E)</h3>
+                    <p class="text-stone-400 text-xs mt-2 line-clamp-2">อาชาแห่งราชสำนักสเปน ก้าวย่างนุ่มนวลประดุจลอยบนอากาศ นิสัยอ่อนโยนและเชื่อฟังเป็นเลิศ</p>
+                    <span class="font-cinzel text-xs text-gold-300 font-semibold mt-4 flex items-center gap-1 group-hover:translate-x-1 transition">
+                        <span>EXPLORE ANDALUSIANS</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-gold-400"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. THE HAUTE COLLECTION (แคตตาล็อกม้าพร้อมจำหน่าย) -->
+    <section id="horse-catalog" class="py-24 bg-gradient-to-b from-obsidian-950 via-obsidian-900 to-obsidian-950 border-t border-b border-gold-500/20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span class="font-cinzel text-xs tracking-[0.3em] text-gold-400 uppercase font-semibold block mb-2">THE 2026 CURATION</span>
+                    <h2 class="font-editorial text-3xl sm:text-5xl font-bold text-white">คอลเลกชันม้าพร้อมจำหน่าย</h2>
+                    <p class="text-stone-400 text-sm mt-2 font-light">
+                        เอกสารพาสปอร์ตม้าสากล (FEI Passport) • ไมโครชิปมาตรฐานสากล • ผลตรวจ X-ray ข้อต่อครบ 14 ท่า
+                    </p>
+                </div>
+                
+                <!-- Match Counter Pill -->
+                <div class="glass-dark px-5 py-2.5 rounded-full border border-gold-500/30 flex items-center gap-3 self-start md:self-auto shadow-gold-glow">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="font-cinzel text-xs text-stone-300">AVAILABLE: <strong id="matchCount" class="text-gold-300 font-bold text-sm">8</strong> NOBLE HORSES</span>
+                </div>
+            </div>
+
+            <!-- Smart Filter Controls (Black & Gold Minimalist) -->
+            <div class="glass-dark p-6 rounded-2xl border border-gold-500/30 mb-10 shadow-2xl">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    
+                    <!-- Search Input -->
+                    <div>
+                        <label class="block font-cinzel text-[10px] tracking-widest text-gold-400 uppercase mb-2">SEARCH HORSES</label>
+                        <div class="relative">
+                            <i data-lucide="search" class="w-4 h-4 text-stone-500 absolute left-3.5 top-3.5"></i>
+                            <input type="text" id="searchInput" placeholder="ชื่อ, สายพันธุ์, ส่วนสูง..." 
+                                   class="w-full pl-10 pr-4 py-2.5 bg-obsidian-950 border border-stone-800 rounded-xl text-sm text-white placeholder-stone-600 focus:outline-none focus:border-gold-500 transition">
+                        </div>
+                    </div>
+
+                    <!-- Breed Filter -->
+                    <div>
+                        <label class="block font-cinzel text-[10px] tracking-widest text-gold-400 uppercase mb-2">BREED SELECTION</label>
+                        <select id="breedFilter" class="w-full px-4 py-2.5 bg-obsidian-950 border border-stone-800 rounded-xl text-sm text-stone-200 focus:outline-none focus:border-gold-500 transition">
+                            <option value="all">ทุกสายพันธุ์ (All Breeds)</option>
+                            <option value="Friesian">Friesian (ฟรีเชียน)</option>
+                            <option value="Arabian">Purebred Arabian (อาหรับแท้)</option>
+                            <option value="Thoroughbred">Thoroughbred (เธอร์รอบเบรด)</option>
+                            <option value="Warmblood">Warmblood / KWPN</option>
+                            <option value="Andalusian">Andalusian / P.R.E</option>
+                            <option value="Pony">Welsh Pony (ม้าแคระ)</option>
+                            <option value="Gypsy Vanner">Gypsy Vanner</option>
+                        </select>
+                    </div>
+
+                    <!-- Discipline Filter -->
+                    <div>
+                        <label class="block font-cinzel text-[10px] tracking-widest text-gold-400 uppercase mb-2">DISCIPLINE / PURPOSE</label>
+                        <select id="disciplineFilter" class="w-full px-4 py-2.5 bg-obsidian-950 border border-stone-800 rounded-xl text-sm text-stone-200 focus:outline-none focus:border-gold-500 transition">
+                            <option value="all">ทุกวัตถุประสงค์ (All Disciplines)</option>
+                            <option value="Show Jumping">กระโดดข้ามเครื่องกีดขวาง (Show Jumping)</option>
+                            <option value="Dressage">ศิลปะการบังคับม้า (Dressage)</option>
+                            <option value="Trail Riding">ขี่พักผ่อนสันทนาการ (Leisure/Trail)</option>
+                            <option value="Breeding">พ่อพันธุ์ / แม่พันธุ์เกียรติยศ (Breeding)</option>
+                            <option value="Kids & Family">เด็กและครอบครัว (Kids / Therapy)</option>
+                        </select>
+                    </div>
+
+                    <!-- Sort Filter -->
+                    <div>
+                        <label class="block font-cinzel text-[10px] tracking-widest text-gold-400 uppercase mb-2">SORT BY</label>
+                        <div class="flex gap-2">
+                            <select id="sortFilter" class="w-full px-4 py-2.5 bg-obsidian-950 border border-stone-800 rounded-xl text-sm text-stone-200 focus:outline-none focus:border-gold-500 transition">
+                                <option value="default">คัดเลือกแนะนำ (Featured)</option>
+                                <option value="price-asc">ราคา: จากต่ำไปสูง</option>
+                                <option value="price-desc">ราคา: จากสูงไปต่ำ</option>
+                                <option value="age-asc">อายุ: อายุน้อยไปมาก</option>
+                            </select>
+                            <button id="resetFilterBtn" class="p-2.5 bg-obsidian-900 hover:bg-obsidian-800 border border-stone-800 rounded-xl text-gold-400 transition" title="ล้างตัวกรอง">
+                                <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Category Chips -->
+                <div class="flex items-center gap-2 overflow-x-auto pt-5 mt-5 border-t border-stone-800/80 no-scrollbar">
+                    <button class="category-chip active px-4 py-1.5 rounded-full text-xs font-cinzel tracking-wider border border-gold-400 bg-gold-500 text-obsidian-950 font-bold transition" data-category="all">
+                        ALL COLLECTION
+                    </button>
+                    <button class="category-chip px-4 py-1.5 rounded-full text-xs font-cinzel tracking-wider border border-stone-800 bg-obsidian-950 text-stone-300 hover:border-gold-500/50 transition" data-category="Show Jumping">
+                        SHOW JUMPING
+                    </button>
+                    <button class="category-chip px-4 py-1.5 rounded-full text-xs font-cinzel tracking-wider border border-stone-800 bg-obsidian-950 text-stone-300 hover:border-gold-500/50 transition" data-category="Dressage">
+                        DRESSAGE
+                    </button>
+                    <button class="category-chip px-4 py-1.5 rounded-full text-xs font-cinzel tracking-wider border border-stone-800 bg-obsidian-950 text-stone-300 hover:border-gold-500/50 transition" data-category="Arabian">
+                        ARABIAN
+                    </button>
+                    <button class="category-chip px-4 py-1.5 rounded-full text-xs font-cinzel tracking-wider border border-stone-800 bg-obsidian-950 text-stone-300 hover:border-gold-500/50 transition" data-category="Friesian">
+                        FRIESIAN
+                    </button>
+                    <button class="category-chip px-4 py-1.5 rounded-full text-xs font-cinzel tracking-wider border border-stone-800 bg-obsidian-950 text-stone-300 hover:border-gold-500/50 transition" data-category="Kids & Family">
+                        KIDS & FAMILY
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dynamic Horse Grid -->
+            <div id="horseGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7">
+                <!-- Injected via JavaScript with Ultra-Luxury Design -->
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="hidden text-center py-20 glass-dark rounded-3xl border border-dashed border-stone-800 p-8 my-6">
+                <i data-lucide="compass" class="w-12 h-12 text-gold-400/60 mx-auto mb-4 animate-spin-slow"></i>
+                <h4 class="font-cinzel text-xl font-bold text-white mb-2">NO HORSES FOUND</h4>
+                <p class="text-stone-400 text-sm mb-6 max-w-md mx-auto">ไม่พบม้าตามเงื่อนไขที่คุณเลือก ลองปรับคำค้นหาหรือติดต่อ VIP Concierge เพื่อค้นหาม้าตามสเปกเฉพาะตัวคุณ</p>
+                <button onclick="resetAllFilters()" class="px-6 py-2.5 rounded-full text-xs font-cinzel font-bold text-obsidian-950 bg-gold-400 hover:bg-gold-300 transition">
+                    RESET ALL FILTERS
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. EQUINE SANCTUARY & PROTOCOLS (มาตรฐานฟาร์มระดับสากล) -->
+    <section id="facilities" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-6 space-y-6">
+                <span class="font-cinzel text-xs tracking-[0.3em] text-gold-400 uppercase font-semibold block">WORLD-CLASS PROTOCOLS</span>
+                <h2 class="font-editorial text-3xl sm:text-5xl font-bold text-white leading-tight">
+                    วิหารแห่งการดูแล <br>
+                    <span class="gold-gradient-text italic font-serif">มาตรฐานสูงสุดระดับสากล</span>
+                </h2>
+                <p class="text-stone-300 text-sm sm:text-base font-light leading-relaxed">
+                    ฟาร์มของเราตั้งอยู่ ณ เชิงเขาใหญ่ บนเนื้อที่กว่า 120 ไร่ ออกแบบตามสถาปัตยกรรมคอกม้ายุโรปคลาสสิก พร้อมระบบปรับอากาศและโอโซนบริสุทธิ์เพื่อสวัสดิภาพขั้นสูงสุดของอาชาทุกตัว
+                </p>
+
+                <!-- Luxury Bullet Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                    <div class="glass-dark p-4 rounded-xl border border-gold-500/20">
+                        <i data-lucide="shield-check" class="w-6 h-6 text-gold-400 mb-2"></i>
+                        <h4 class="font-cinzel text-sm font-bold text-white">24/7 VETERINARY CARE</h4>
+                        <p class="text-stone-400 text-xs mt-1">ทีมสัตวแพทย์ม้าชำนาญการประจำฟาร์ม พร้อมเครื่องเอกซเรย์ดิจิทัลและอัลตราซาวด์</p>
+                    </div>
+                    
+                    <div class="glass-dark p-4 rounded-xl border border-gold-500/20">
+                        <i data-lucide="plane" class="w-6 h-6 text-gold-400 mb-2"></i>
+                        <h4 class="font-cinzel text-sm font-bold text-white">VIP AIR TRANSPORT</h4>
+                        <p class="text-stone-400 text-xs mt-1">บริการขนส่งม้าแบบ First-Class ควบคุมอุณหภูมิ 22°C และระบบซับแรงสะเทือน</p>
+                    </div>
+
+                    <div class="glass-dark p-4 rounded-xl border border-gold-500/20">
+                        <i data-lucide="award" class="w-6 h-6 text-gold-400 mb-2"></i>
+                        <h4 class="font-cinzel text-sm font-bold text-white">FEI STANDARD ARENA</h4>
+                        <p class="text-stone-400 text-xs mt-1">สนามทรายเยอรมันผสมซิลิกาไฟเบอร์ ถนอมข้อต่อและกีบม้าในทุกการก้าวกระโดด</p>
+                    </div>
+
+                    <div class="glass-dark p-4 rounded-xl border border-gold-500/20">
+                        <i data-lucide="file-check-2" class="w-6 h-6 text-gold-400 mb-2"></i>
+                        <h4 class="font-cinzel text-sm font-bold text-white">PEDIGREE ASSURANCE</h4>
+                        <p class="text-stone-400 text-xs mt-1">เอกสารรับรองสายพันธุ์แท้ 100% พร้อมผลตรวจยีนและดีเอ็นเอจากแล็บยุโรป</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Luxury Stables Photo Collage with Gold Frame -->
+            <div class="lg:col-span-6 relative">
+                <div class="relative p-2 rounded-3xl bg-gradient-to-tr from-gold-700 via-gold-400 to-gold-200 shadow-gold-glow">
+                    <div class="rounded-[22px] overflow-hidden bg-obsidian-950">
+                        <img src="https://images.unsplash.com/photo-1598974357801-cbca100e6571?auto=format&fit=crop&w=1200&q=85" 
+                             alt="Luxury Stables" class="w-full h-[520px] object-cover filter contrast-110">
+                    </div>
+                </div>
+
+                <!-- Floating Royal Seal of Excellence -->
+                <div class="absolute -bottom-6 -left-6 glass-dark p-5 rounded-2xl border border-gold-400 shadow-2xl max-w-xs hidden sm:flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-gold-400 text-obsidian-950 flex items-center justify-center font-bold">
+                        <i data-lucide="check" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <p class="font-cinzel text-[10px] tracking-widest text-gold-400 uppercase font-bold">FEI CERTIFIED FACILITY</p>
+                        <p class="text-xs font-bold text-white mt-0.5">มาตรฐานสูงสุดแห่งสมาคมกีฬาขี่ม้า</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. PATRON TESTIMONIALS (เสียงสะท้อนจากเจ้าของม้า) -->
+    <section id="reviews" class="py-24 bg-obsidian-900 border-t border-b border-gold-500/20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="font-cinzel text-xs tracking-[0.3em] text-gold-400 uppercase font-semibold block mb-2">PATRONS OF ROYAL EQUINE</span>
+                <h2 class="font-editorial text-3xl sm:text-5xl font-bold text-white">เกียรติยศแห่งความไว้วางใจ</h2>
+                <div class="w-20 h-0.5 bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mt-4 mb-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Patron 1 -->
+                <div class="glass-dark p-8 rounded-2xl border border-gold-500/25 relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-gold-400 mb-5 gap-1">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-stone-300 text-sm leading-relaxed italic mb-6">
+                            "Golden Apollo ม้าวอร์มบลัดที่ได้รับจาก Royal Equine พาผมคว้าแชมป์สนาม 1.30m ได้สำเร็จ สรีรวิทยาและจิตประสาทของม้าได้รับการพัฒนามาอย่างสมบูรณ์แบบที่สุด"
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-stone-800 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gold-500/20 border border-gold-400 flex items-center justify-center font-cinzel font-bold text-gold-300">
+                            KP
+                        </div>
+                        <div>
+                            <h4 class="font-cinzel text-xs font-bold text-white">กานต์ พัชรภัทร</h4>
+                            <p class="text-[11px] text-gold-400">นักกีฬาขี่ม้ากระโดดข้ามเครื่องกีดขวาง</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Patron 2 -->
+                <div class="glass-dark p-8 rounded-2xl border border-gold-500/25 relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-gold-400 mb-5 gap-1">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-stone-300 text-sm leading-relaxed italic mb-6">
+                            "Shadow Sovereign ม้าฟรีเชียนสาย KFPS ตัวจริงสง่างามมาก ขนแผงคอยาวสมบูรณ์แบบ การโอนย้ายพาสปอร์ต FEI และเอกสารตรวจสุขภาพโปร่งใส ไร้ที่ติครับ"
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-stone-800 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gold-500/20 border border-gold-400 flex items-center justify-center font-cinzel font-bold text-gold-300">
+                            TR
+                        </div>
+                        <div>
+                            <h4 class="font-cinzel text-xs font-bold text-white">ธนินทร์ โรจนวงศ์</h4>
+                            <p class="text-[11px] text-gold-400">เจ้าของฟาร์มส่วนตัว เขาใหญ่</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Patron 3 -->
+                <div class="glass-dark p-8 rounded-2xl border border-gold-500/25 relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-gold-400 mb-5 gap-1">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-stone-300 text-sm leading-relaxed italic mb-6">
+                            "เวลช์โพนี่ตัวโปรดของลูกสาว นิสัยใจดีและอ่อนโยนมาก รถขนส่งม้าแบบปรับอากาศ VIP ส่งถึงบ้านอย่างปลอดภัย ทีมงานใส่ใจทุกรายละเอียดระดับ 6 ดาว"
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-stone-800 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gold-500/20 border border-gold-400 flex items-center justify-center font-cinzel font-bold text-gold-300">
+                            NW
+                        </div>
+                        <div>
+                            <h4 class="font-cinzel text-xs font-bold text-white">นภสร วาณิชสกุล</h4>
+                            <p class="text-[11px] text-gold-400">นักธุรกิจและผู้อุปถัมภ์ครอบครัว</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. VIP CONCIERGE & PRIVATE VIEWING BOOKING (ระบบนัดหมายระดับ VIP) -->
+    <section id="contact" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <!-- Left Info Column -->
+            <div class="lg:col-span-5 space-y-8">
+                <div>
+                    <span class="font-cinzel text-xs tracking-[0.3em] text-gold-400 uppercase font-semibold block mb-2">HAUTE CONCIERGE</span>
+                    <h2 class="font-editorial text-3xl sm:text-5xl font-bold text-white leading-tight">
+                        นัดหมายเข้าชมส่วนตัว <br>
+                        <span class="gold-gradient-text italic font-serif">ณ วิหารแห่งอาชา</span>
+                    </h2>
+                    <p class="text-stone-300 text-sm font-light leading-relaxed mt-4">
+                        เพื่อมอบความเป็นส่วนตัวสูงสุด เราเปิดรับการเข้าชมแบบไพรเวทเท่านั้น พร้อมบริการเครื่องดื่มแชมเปญต้อนรับและการทดลองขี่ในสนามมาตรฐานสากล
+                    </p>
+                </div>
+
+                <div class="space-y-4 pt-4 border-t border-stone-800">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-obsidian-900 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <p class="font-cinzel text-[10px] tracking-widest text-gold-400 uppercase">ESTATE LOCATION</p>
+                            <p class="text-xs sm:text-sm text-stone-200">99 หมู่ 5 ต.หมูสี อ.ปากช่อง จ.นครราชสีมา 30130 (เขาใหญ่)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-obsidian-900 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0">
+                            <i data-lucide="phone-call" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <p class="font-cinzel text-[10px] tracking-widest text-gold-400 uppercase">VIP DIRECT LINE</p>
+                            <p class="text-xs sm:text-sm text-stone-200">+66 (0) 89-765-4321, +66 (0) 2-999-8888</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-obsidian-900 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0">
+                            <i data-lucide="message-square" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <p class="font-cinzel text-[10px] tracking-widest text-gold-400 uppercase">OFFICIAL LINE CONCIERGE</p>
+                            <p class="text-xs sm:text-sm text-stone-200">@royalequine (ตลอด 24 ชั่วโมง)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Luxury Booking Form -->
+            <div class="lg:col-span-7">
+                <div class="glass-dark p-8 sm:p-10 rounded-3xl border border-gold-500/40 shadow-2xl relative">
+                    
+                    <h3 class="font-editorial text-2xl font-bold text-white mb-2">แบบฟอร์มนัดหมาย Private Viewing</h3>
+                    <p class="text-stone-400 text-xs mb-8">กรุณากรอกข้อมูล เจ้าหน้าที่ระดับผู้บริหารจะติดต่อกลับเพื่อยืนยันกำหนดการเดินทางภายใน 2 ชั่วโมง</p>
+
+                    <form id="bookingForm" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block font-cinzel text-[10px] tracking-widest text-gold-400 uppercase mb-1.5">PATRON NAME (ชื่อผู้ติดต่อ) *</label>
+                                <input type="text" required id="custName" placeholder="เช่น คุณธนกร สิทธิโชค" 
+                                       class="w-full px-4 py-3 bg-obsidian-950 border border-stone-800 rounded-xl text-sm text-white placeholder-stone-600 focus:outline-none focus:border-gold-500 transition">
+                            </div>
+                            <div>
+                                <label class="block font-cinzel text-[10px] tracking-widest text-gold-400 uppercase mb-1.5">TELEPHONE (เบอร์โทรติดต่อ) *</label>
+                                <input type="tel" required id="custPhone" placeholder="08X-XXX-XXXX" 
+                                       class="w-full px-4 py-3 bg-obsidian-950 border border-stone-800 rounded-xl text-sm text-white placeholder-stone-600 focus:outline-none focus:border-gold-500 transition">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block font-cinzel text-[10px] tracking-widest text-gold-400 uppercase mb-1.5">PREFERRED DATE (วันที่ต้องการเข้าชม) *</label>
+                                <input type="date" required id="visitDate" 
+                                       class="w-full px-4 py-3 bg-obsidian-950 border border-stone-800 rounded-xl text-sm text-white focus:outline-none focus:border-gold-500 transition">
+                            </div>
+                            <div>
+                                <label class="block font-cinzel text-[10px] tracking-widest text-gold-400 uppercase mb-1.5">HORSE OF INTEREST (ม้าที่สนใจ)</label>
+                                <select id="horseInterestedSelect" 
+                                        class="w-full px-4 py-3 bg-obsidian-950 border border-stone-800 rounded-xl text-sm text-stone-200 focus:outline-none focus:border-gold-500 transition">
+                                    <option value="ยังไม่ระบุ / ขอคำปรึกษาจากผู้เชี่ยวชาญ">ยังไม่ระบุ / ขอคำปรึกษาจากผู้เชี่ยวชาญ</option>
+                                    <option value="Shadow Sovereign (Friesian Stallion)">Shadow Sovereign (Friesian Stallion)</option>
+                                    <option value="Desert Mirage (Purebred Arabian)">Desert Mirage (Purebred Arabian)</option>
+                                    <option value="Thunderbolt King (Thoroughbred)">Thunderbolt King (Thoroughbred)</option>
+                                    <option value="Valiente Real (Andalusian P.R.E)">Valiente Real (Andalusian P.R.E)</option>
+                                    <option value="Golden Apollo (KWPN Warmblood)">Golden Apollo (KWPN Warmblood)</option>
+                                    <option value="Caramel Delight (Welsh Pony)">Caramel Delight (Welsh Pony)</option>
+                                    <option value="Eclipse Dancer (Hanoverian Mare)">Eclipse Dancer (Hanoverian Mare)</option>
+                                    <option value="Mystic Pearl (Gypsy Vanner)">Mystic Pearl (Gypsy Vanner)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block font-cinzel text-[10px] tracking-widest text-gold-400 uppercase mb-1.5">SPECIAL REQUESTS (ความต้องการพิเศษ)</label>
+                            <textarea id="custNote" rows="3" placeholder="เช่น ต้องการพาแพทย์ประจำตัวมาร่วมตรวจเช็ค, ทดลองขี่ในสนามกระโดด, จัดเตรียมรถรับ-ส่งสนามบิน..." 
+                                      class="w-full px-4 py-3 bg-obsidian-950 border border-stone-800 rounded-xl text-sm text-white placeholder-stone-600 focus:outline-none focus:border-gold-500 transition"></textarea>
+                        </div>
+
+                        <button type="submit" 
+                                class="w-full py-4 rounded-xl font-cinzel font-bold text-xs tracking-widest text-obsidian-950 bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 hover:from-gold-200 hover:to-gold-300 shadow-gold-glow hover:shadow-gold-glow-lg transition duration-300 flex items-center justify-center gap-2">
+                            <i data-lucide="check-circle" class="w-4 h-4"></i>
+                            <span>CONFIRM PRIVATE VIEWING APPOINTMENT</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. HAUTE ÉQUESTRE FOOTER -->
+    <footer class="bg-obsidian-950 border-t border-gold-500/20 py-16 text-stone-500 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full border border-gold-400 flex items-center justify-center text-gold-300">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                            <path d="M20.5 8c-.3-2.1-1.8-3.9-3.8-4.6-2.1-.7-4.4-.1-6 1.4L9 6.5C7.7 5.6 6 5.3 4.5 5.8 3.4 6.2 2.5 7.1 2 8.2c-.4 1-.4 2.1 0 3.1.5 1.2 1.5 2.1 2.7 2.5l.3.1c-.2.7-.2 1.5 0 2.2l.6 1.9c.4 1.2 1.4 2.1 2.6 2.4 1.4.3 2.9-.2 3.8-1.3l.9-1.1 1.6.7c1.3.6 2.8.4 3.9-.4 1.2-.9 1.8-2.3 1.8-3.8l.3-6.5zM6.5 9c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-cinzel text-sm font-bold text-white tracking-widest">ROYAL EQUINE ESTATE</p>
+                        <p class="text-[10px] text-stone-500">HAUTE ÉQUESTRE & STUD FARM • LAB WEEK 02</p>
+                    </div>
+                </div>
+
+                <div class="text-center md:text-right font-light">
+                    <p class="text-stone-400">© 2026 ROYAL EQUINE ESTATE. ALL RIGHTS RESERVED.</p>
+                    <p class="text-[10px] text-stone-600 mt-1">AFFILIATED WITH FEI (FÉDÉRATION ÉQUESTRE INTERNATIONALE) & THAILAND EQUESTRIAN FEDERATION</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 10. MODAL: CERTIFICATE OF PEDIGREE & SPECIFICATION -->
+    <div id="detailModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+        <div class="glass-dark rounded-3xl max-w-4xl w-full max-h-[92vh] overflow-y-auto border border-gold-500/40 shadow-2xl relative transform scale-95 transition-transform duration-300" id="modalBox">
+            
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-5 right-5 z-20 w-10 h-10 rounded-full bg-obsidian-950/80 border border-gold-500/30 text-gold-300 hover:text-white flex items-center justify-center transition">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <!-- Modal Content Injected by JS -->
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- 11. WISHLIST SIDE-OVER DRAWER -->
+    <div id="wishlistDrawer" class="fixed inset-y-0 right-0 z-50 w-full sm:w-[420px] bg-obsidian-950 border-l border-gold-500/30 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+        <div class="p-6 border-b border-gold-500/20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <i data-lucide="heart" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                <h3 class="font-cinzel text-sm font-bold text-white tracking-widest">SELECTED HORSES (<span id="drawerCount">0</span>)</h3>
+            </div>
+            <button onclick="toggleWishlistDrawer(false)" class="p-2 text-stone-400 hover:text-white rounded-lg">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
+
+        <div id="drawerItemList" class="flex-1 overflow-y-auto p-6 space-y-4"></div>
+
+        <div class="p-6 border-t border-gold-500/20 bg-obsidian-900 space-y-3">
+            <button onclick="proceedToBookingWithWishlist()" id="drawerBookingBtn" class="w-full py-3.5 rounded-xl font-cinzel font-bold text-xs tracking-widest text-obsidian-950 bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 hover:from-gold-200 hover:to-gold-400 shadow-gold-glow transition flex items-center justify-center gap-2">
+                <i data-lucide="calendar" class="w-4 h-4"></i>
+                <span>REQUEST VIEWING FOR ALL</span>
+            </button>
+            <button onclick="clearWishlist()" class="w-full py-2 text-stone-500 hover:text-red-400 text-xs font-cinzel text-center transition">
+                CLEAR ALL SELECTIONS
+            </button>
+        </div>
+    </div>
+    <div id="drawerOverlay" onclick="toggleWishlistDrawer(false)" class="fixed inset-0 bg-black/60 z-40 hidden opacity-0 transition-opacity"></div>
+
+    <!-- 12. TOAST NOTIFICATION -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 glass-dark text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-gold-400 flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300">
+        <div id="toastIcon" class="w-7 h-7 rounded-full bg-gold-400 text-obsidian-950 flex items-center justify-center">
+            <i data-lucide="check" class="w-4 h-4"></i>
+        </div>
+        <div>
+            <p id="toastTitle" class="font-cinzel text-xs font-bold text-gold-300">SUCCESS</p>
+            <p id="toastMessage" class="text-xs text-stone-300">Added to your private portfolio</p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT APPLICATION LOGIC -->
+    <script>
+        // --- 1. HORSE CURATED DATA ---
+        const horsesData = [
+            {
+                id: 1,
+                name: "Shadow Sovereign",
+                breed: "Friesian",
+                breedThai: "ฟรีเชียน (KFPS Royal Dutch Studbook)",
+                gender: "Stallion (พ่อพันธุ์)",
+                age: 6,
+                height: "16.3 hh (170 ซม.)",
+                color: "Jet Black (ดำขลับดั่งนิล)",
+                discipline: "Dressage & Haute École",
+                category: "Dressage",
+                priceTHB: 1850000,
+                statusBadge: "KFPS GRAND PRIX PROSPECT",
+                badgeBorder: "border-purple-500/40 text-purple-300 bg-purple-950/60",
+                image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=900&q=85",
+                sire: "Jasper 366 (KFPS Pref)",
+                dam: "Femke fan de Wâlden (Ster)",
+                pedigree: "KFPS Royal Dutch Studbook (Registered Ster)",
+                coggins: "Negative (ตรวจล่าสุด ต.ค. 2026)",
+                description: "ม้าฟรีเชียนสายเลือด KFPS แท้ ขนแผงคอดกหนาทอดตัวยาวถึงหัวเข่า ก้าวย่างสูงสง่างาม มีพลังสปริงขาอันไร้ที่ติ เหมาะสำหรับกีฬา Dressage ระดับสูง หรืองานพิธีการระดับราชสำนัก",
+                temperament: "สุขุม หนักแน่น กล้าหาญ ไม่ตื่นกลัวสิ่งเร้า",
+                skillLevel: "ปานกลาง - ระดับแข่งขัน"
+            },
+            {
+                id: 2,
+                name: "Desert Mirage",
+                breed: "Arabian",
+                breedThai: "อาหรับแท้ (Straight Egyptian Arabian)",
+                gender: "Mare (แม่พันธุ์)",
+                age: 5,
+                height: "15.1 hh (154 ซม.)",
+                color: "Dappled Silver Grey (เทาเงินประกาย)",
+                discipline: "Endurance & Halter Championship",
+                category: "Arabian",
+                priceTHB: 1450000,
+                statusBadge: "STRAIGHT EGYPTIAN HERITAGE",
+                badgeBorder: "border-gold-500/40 text-gold-300 bg-gold-950/60",
+                image: "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=900&q=85",
+                sire: "Marwan Al Shaqab Lineage",
+                dam: "Princess Noor (WAHO Egyptian)",
+                pedigree: "WAHO Registered / Straight Egyptian",
+                coggins: "Negative (ตรวจล่าสุด พ.ย. 2026)",
+                description: "สายเลือดตรงเอมิเรตส์ โครงหน้า Dish Face ลึกดั่งประติมากรรมโบราณ ดวงตากลมโต หางยกสูงตามแบบฉบับม้าทะเลทรายแท้ ความอดทนยอดเยี่ยม พร้อมความผูกพันและเชื่อฟังผู้ขี่อย่างลึกซึ้ง",
+                temperament: "ว่องไว ฉลาด ล้ำลึก และซื่อสัตย์",
+                skillLevel: "เหมาะกับทุกระดับ"
+            },
+            {
+                id: 3,
+                name: "Thunderbolt King",
+                breed: "Thoroughbred",
+                breedThai: "เธอร์รอบเบรด (General Stud Book)",
+                gender: "Gelding (ม้าตอน)",
+                age: 7,
+                height: "16.2 hh (168 ซม.)",
+                color: "Rich Bay (น้ำตาลแดงข้อเท้าขาว)",
+                discipline: "Show Jumping & Eventing (1.20m)",
+                category: "Show Jumping",
+                priceTHB: 1250000,
+                statusBadge: "SHOW JUMPING 1.20M PASSED",
+                badgeBorder: "border-emerald-500/40 text-emerald-300 bg-emerald-950/60",
+                image: "https://images.unsplash.com/photo-1598974357801-cbca100e6571?auto=format&fit=crop&w=900&q=85",
+                sire: "Galileo Bloodline",
+                dam: "Northern Empress (Weatherbys)",
+                pedigree: "General Stud Book (Weatherbys UK)",
+                coggins: "Negative (ตรวจล่าสุด ต.ค. 2026)",
+                description: "ม้าตอนจิตประสาทนิ่งดั่งหินผา มีพลังส่งตัวจากกล้ามเนื้อขาหลังอันทรงเกียรติ พัฒนามาเพื่อกีฬา Show Jumping และ Eventing โดยเฉพาะ ไม่ตื่นคน เข้าซองเดินทางง่าย",
+                temperament: "นิ่ง มั่นคง สมาธิดีเลิศในสนาม",
+                skillLevel: "ผู้ขี่ระดับกลางขึ้นไป"
+            },
+            {
+                id: 4,
+                name: "Valiente Real",
+                breed: "Andalusian",
+                breedThai: "อันดาลูเซียน (Pura Raza Española)",
+                gender: "Stallion (พ่อพันธุ์)",
+                age: 6,
+                height: "16.0 hh (163 ซม.)",
+                color: "Pearly Alabaster (ขาวมุกงาช้าง)",
+                discipline: "Classical Dressage & High School",
+                category: "Dressage",
+                priceTHB: 2100000,
+                statusBadge: "ANCCE SPANISH CERTIFIED",
+                badgeBorder: "border-blue-500/40 text-blue-300 bg-blue-950/60",
+                image: "https://images.unsplash.com/photo-1547407139-3c921a66005c?auto=format&fit=crop&w=900&q=85",
+                sire: "Escalera Royal Studbook",
+                dam: "Sevillana IX",
+                pedigree: "ANCCE Official Spanish Studbook",
+                coggins: "Negative (ตรวจล่าสุด ก.ย. 2026)",
+                description: "ม้าสเปนสายพันธุ์แท้แห่งราชสำนัก สรีระหนาแข็งแกร่ง คอโค้งงดงามดั่งคันศร ก้าวย่างนุ่มนวลประดุจลอยตัว เหมาะสำหรับผู้ครอบครองที่หลงใหลในศิลปะการขี่ม้าชั้นสูง (Classical Horsemanship)",
+                temperament: "อ่อนโยน นอบน้อม เชื่อฟังคำสั่งอย่างยอดเยี่ยม",
+                skillLevel: "เหมาะกับทุกระดับ"
+            },
+            {
+                id: 5,
+                name: "Golden Apollo",
+                breed: "Warmblood",
+                breedThai: "ดัตช์วอร์มบลัด (KWPN Royal Studbook)",
+                gender: "Gelding (ม้าตอน)",
+                age: 8,
+                height: "17.0 hh (173 ซม.)",
+                color: "Chestnut Gold (ทองแดงเปล่งประกาย)",
+                discipline: "Grand Prix Show Jumping (1.35m)",
+                category: "Show Jumping",
+                priceTHB: 2600000,
+                statusBadge: "GRADE A OLYMPIC PROSPECT",
+                badgeBorder: "border-amber-500/50 text-amber-200 bg-amber-950/70 font-bold",
+                image: "https://images.unsplash.com/photo-1534773728080-33d31da27ae5?auto=format&fit=crop&w=900&q=85",
+                sire: "Heartbreaker / Darco Line",
+                dam: "Zilvia KWPN Keur",
+                pedigree: "KWPN Royal Warmblood Studbook (FEI Passport)",
+                coggins: "Negative (ตรวจล่าสุด ต.ค. 2026)",
+                description: "ม้าแข่งกระโดดระดับแชมเปี้ยน ผ่านสังเวียนทดสอบระดับยุโรปและเอเชีย การกะระยะแม่นยำ ขาหน้าพับแนบตัวสมบูรณ์แบบ เหมาะสำหรับนักกีฬาทีมชาติหรือผู้ที่ต้องการม้าเกรดพรีเมียมพร้อมลงชิงถ้วย",
+                temperament: "ไฟแรงในสนาม แต่อ่อนโยนในคอก ขี่ง่าย",
+                skillLevel: "ระดับแข่งขัน"
+            },
+            {
+                id: 6,
+                name: "Caramel Delight",
+                breed: "Pony",
+                breedThai: "เวลช์โพนี่ (Welsh Section B)",
+                gender: "Gelding (ม้าแคระตอน)",
+                age: 6,
+                height: "12.2 hh (128 ซม.)",
+                color: "Palomino (สีทองแผงคอขาว)",
+                discipline: "Family, Kids Riding & Equine Therapy",
+                category: "Kids & Family",
+                priceTHB: 490000,
+                statusBadge: "100% CHILD SAFE GUARANTEED",
+                badgeBorder: "border-emerald-500/50 text-emerald-300 bg-emerald-950/60",
+                image: "https://images.unsplash.com/photo-1509205477838-a534e43a849f?auto=format&fit=crop&w=900&q=85",
+                sire: "Eyarth Beau Geste",
+                dam: "Cwrtycadno Cariad",
+                pedigree: "Welsh Pony & Cob Society UK",
+                coggins: "Negative (ตรวจล่าสุด พ.ย. 2026)",
+                description: "ม้าขวัญใจเด็กๆ นิสัยขี้เล่น ใจเย็นที่สุดในฟาร์ม ไม่เคยเตะ ไม่กัด ไม่สะบัด ยินดีให้เด็กแปรงขน กอดขา และป้อนแครอท เหมาะสำหรับครอบครัวที่มีเด็กเริ่มเรียนขี่ม้า",
+                temperament: "อ่อนโยนที่สุด นิ่งมาก ใจเย็น ไร้เดียงสา",
+                skillLevel: "มือใหม่และเด็กอายุ 4 ขวบขึ้นไป"
+            },
+            {
+                id: 7,
+                name: "Eclipse Dancer",
+                breed: "Warmblood",
+                breedThai: "ฮันโนเวอร์เรียน (Hanoverian Verband Germany)",
+                gender: "Mare (แม่พันธุ์)",
+                age: 7,
+                height: "16.3 hh (170 ซม.)",
+                color: "Dark Espresso Bay (น้ำตาลเข้มเกือบดำ)",
+                discipline: "Dressage & Show Jumping",
+                category: "Dressage",
+                priceTHB: 1680000,
+                statusBadge: "GERMAN STUDBOOK REGISTERED",
+                badgeBorder: "border-stone-500/50 text-gold-300 bg-stone-900/80",
+                image: "https://images.unsplash.com/photo-1551884831-bbf3cdc6469e?auto=format&fit=crop&w=900&q=85",
+                sire: "De Niro (Dressage Legend)",
+                dam: "St.Pr.St. Hann Lore",
+                pedigree: "Hannoveraner Verband Registered (FEI)",
+                coggins: "Negative (ตรวจล่าสุด ต.ค. 2026)",
+                description: "แม่พันธุ์คุณภาพยอดเยี่ยม จังหวะ Canter 3 จังหวะชัดเจน สมาธิดีเลิศ ให้ลูกม้าคุณภาพสายเลือดดีมาก มีความสามารถทั้งในแนว Dressage และการกระโดด",
+                temperament: "ฉลาด ตอบสนองต่อบังเหียนและขาได้ไว",
+                skillLevel: "ปานกลาง - ระดับสูง"
+            },
+            {
+                id: 8,
+                name: "Mystic Pearl",
+                breed: "Gypsy Vanner",
+                breedThai: "ยิปซี แวนเนอร์ (GVHS Registered)",
+                gender: "Mare (แม่พันธุ์)",
+                age: 5,
+                height: "14.3 hh (150 ซม.)",
+                color: "Piebald (ขาวแต้มดำลายสง่างาม)",
+                discipline: "Leisure, Photo Model & Trail Riding",
+                category: "Kids & Family",
+                priceTHB: 1350000,
+                statusBadge: "FEATHERED FEET HERITAGE",
+                badgeBorder: "border-indigo-500/50 text-indigo-300 bg-indigo-950/60",
+                image: "https://images.unsplash.com/photo-1566251037378-5e04e3bec343?auto=format&fit=crop&w=900&q=85",
+                sire: "The Gypsy King Line",
+                dam: "Blue Blagdon Lady",
+                pedigree: "Gypsy Vanner Horse Society (GVHS USA)",
+                coggins: "Negative (ตรวจล่าสุด ต.ค. 2026)",
+                description: "ม้าแฟนซีที่สวยดั่งเทพนิยาย ขนบริเวณข้อเท้าหนาเป็นพู่สวมรองเท้า (Feathering) เดินสวย ถ่ายรูปขึ้นกล้อง นิสัยขี้อ้อนเหมือนสุนัขตัวใหญ่ เหมาะสำหรับรีสอร์ท หรือขี่พักผ่อนส่วนตัว",
+                temperament: "เชื่อง ขี้อ้อน เป็นมิตรกับทุกคน",
+                skillLevel: "เหมาะกับทุกระดับ"
+            }
+        ];
+
+        // --- 2. GLOBAL STATE ---
+        let currentCurrency = 'THB';
+        const exchangeRates = {
+            THB: 1,
+            USD: 0.029, // 1 THB = ~0.029 USD
+            EUR: 0.027  // 1 THB = ~0.027 EUR
+        };
+
+        let currentFilter = {
+            search: '',
+            breed: 'all',
+            discipline: 'all',
+            category: 'all',
+            sort: 'default'
+        };
+
+        let wishlist = JSON.parse(localStorage.getItem('royalEquineWishlist')) || [];
+
+        // Format Currency dynamically
+        function formatPrice(thbAmount) {
+            if (currentCurrency === 'USD') {
+                const usd = Math.round(thbAmount * exchangeRates.USD);
+                return '$' + usd.toLocaleString('en-US');
+            } else if (currentCurrency === 'EUR') {
+                const eur = Math.round(thbAmount * exchangeRates.EUR);
+                return '€' + eur.toLocaleString('de-DE');
+            }
+            return '฿' + thbAmount.toLocaleString('th-TH');
+        }
+
+        function changeCurrency(newCurr) {
+            currentCurrency = newCurr;
+            renderHorses();
+            renderWishlistDrawerItems();
+            showToast("CURRENCY CONVERTED", `Displaying prices in ${newCurr}`);
+        }
+
+        // --- 3. IN-PLACE PROFILE EDIT ---
+        function editDossier(elementId, fieldLabel) {
+            const el = document.getElementById(elementId);
+            const currentVal = el.textContent;
+            const newVal = prompt(`แก้ไขข้อมูล ${fieldLabel}:`, currentVal);
+            if (newVal !== null && newVal.trim() !== '') {
+                el.textContent = newVal.trim();
+                localStorage.setItem(elementId, newVal.trim());
+                showToast("DOSSIER UPDATED", `${fieldLabel} changed to "${newVal.trim()}"`);
+            }
+        }
+
+        function loadSavedDossier() {
+            if (localStorage.getItem('studentNickname')) {
+                document.getElementById('studentNickname').textContent = localStorage.getItem('studentNickname');
+            }
+            if (localStorage.getItem('studentMajor')) {
+                document.getElementById('studentMajor').textContent = localStorage.getItem('studentMajor');
+            }
+        }
+
+        // --- 4. RENDER CATALOG CARDS ---
+        function renderHorses() {
+            const grid = document.getElementById('horseGrid');
+            const empty = document.getElementById('emptyState');
+            const matchCount = document.getElementById('matchCount');
+
+            let filtered = horsesData.filter(h => {
+                const matchesSearch = !currentFilter.search || 
+                    h.name.toLowerCase().includes(currentFilter.search.toLowerCase()) ||
+                    h.breed.toLowerCase().includes(currentFilter.search.toLowerCase()) ||
+                    h.breedThai.toLowerCase().includes(currentFilter.search.toLowerCase()) ||
+                    h.discipline.toLowerCase().includes(currentFilter.search.toLowerCase());
+
+                const matchesBreed = currentFilter.breed === 'all' || h.breed === currentFilter.breed;
+                const matchesDiscipline = currentFilter.discipline === 'all' || h.discipline.includes(currentFilter.discipline);
+                const matchesCategory = currentFilter.category === 'all' || 
+                    h.category === currentFilter.category || 
+                    h.breed.includes(currentFilter.category) ||
+                    h.discipline.includes(currentFilter.category);
+
+                return matchesSearch && matchesBreed && matchesDiscipline && matchesCategory;
+            });
+
+            if (currentFilter.sort === 'price-asc') {
+                filtered.sort((a, b) => a.priceTHB - b.priceTHB);
+            } else if (currentFilter.sort === 'price-desc') {
+                filtered.sort((a, b) => b.priceTHB - a.priceTHB);
+            } else if (currentFilter.sort === 'age-asc') {
+                filtered.sort((a, b) => a.age - b.age);
+            }
+
+            matchCount.textContent = filtered.length;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                empty.classList.remove('hidden');
+                return;
+            } else {
+                empty.classList.add('hidden');
+            }
+
+            grid.innerHTML = filtered.map(horse => {
+                const isSaved = wishlist.some(item => item.id === horse.id);
+                return `
+                    <div class="glass-dark rounded-2xl overflow-hidden border border-gold-500/20 hover:border-gold-400 transition-all duration-500 flex flex-col group transform hover:-translate-y-2 shadow-card-luxury">
+                        <!-- Image Container with Subtle Gold Borders -->
+                        <div class="relative overflow-hidden aspect-[4/3] bg-obsidian-950">
+                            <img src="${horse.image}" alt="${horse.name}" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
+                            
+                            <!-- Status Tag -->
+                            <span class="absolute top-3 left-3 text-[10px] font-cinzel font-bold px-3 py-1 rounded-full border backdrop-blur-md shadow-md ${horse.badgeBorder}">
+                                ${horse.statusBadge}
+                            </span>
+
+                            <!-- Wishlist Toggle -->
+                            <button onclick="toggleWishlist(${horse.id}, event)" 
+                                    class="absolute top-3 right-3 w-9 h-9 rounded-full bg-obsidian-950/80 backdrop-blur-md border border-gold-500/40 flex items-center justify-center text-stone-300 hover:text-gold-300 transition shadow hover:scale-110">
+                                <i data-lucide="heart" class="w-4 h-4 ${isSaved ? 'text-gold-400 fill-gold-400' : ''}"></i>
+                            </button>
+
+                            <!-- Bottom Spec Bar -->
+                            <div class="absolute bottom-2 inset-x-2 bg-obsidian-950/85 backdrop-blur-md rounded-xl px-3.5 py-1.5 flex justify-between items-center text-xs text-stone-200 border border-gold-500/20">
+                                <span class="flex items-center gap-1 font-cinzel text-[11px]"><i data-lucide="calendar" class="w-3.5 h-3.5 text-gold-400"></i> ${horse.age} YEARS</span>
+                                <span class="flex items-center gap-1 font-cinzel text-[11px]"><i data-lucide="ruler" class="w-3.5 h-3.5 text-gold-400"></i> ${horse.height}</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-1.5">
+                                    <span class="font-cinzel text-[11px] tracking-widest text-gold-400 font-bold uppercase">${horse.breed}</span>
+                                    <span class="text-[10px] font-cinzel text-stone-400 bg-obsidian-900 px-2 py-0.5 rounded border border-stone-800">${horse.gender.split(' ')[0]}</span>
+                                </div>
+                                <h3 class="font-editorial text-2xl font-bold text-white group-hover:text-gold-300 transition">${horse.name}</h3>
+                                <p class="text-stone-400 text-xs mt-1.5 mb-4 line-clamp-2 font-light">${horse.description}</p>
+                                
+                                <div class="space-y-1.5 mb-5 text-xs text-stone-300 border-t border-stone-800/80 pt-3">
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="award" class="w-3.5 h-3.5 text-gold-400 shrink-0"></i>
+                                        <span class="truncate text-[11px] text-stone-300">${horse.discipline}</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400 shrink-0"></i>
+                                        <span class="truncate text-[11px] text-stone-400">${horse.pedigree}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Price and Action Buttons -->
+                            <div class="pt-4 border-t border-stone-800">
+                                <div class="flex items-baseline justify-between mb-3.5">
+                                    <span class="font-cinzel text-[10px] tracking-wider text-stone-500 uppercase">PRICE (สุทธิ)</span>
+                                    <span class="text-xl font-bold gold-gradient-text font-cinzel">${formatPrice(horse.priceTHB)}</span>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-2.5">
+                                    <button onclick="openDetailModal(${horse.id})" 
+                                            class="w-full py-2.5 px-3 rounded-xl text-xs font-cinzel tracking-wider text-stone-300 bg-obsidian-900 hover:bg-obsidian-800 border border-gold-500/30 transition flex items-center justify-center gap-1.5">
+                                        <i data-lucide="file-text" class="w-3.5 h-3.5 text-gold-400"></i>
+                                        <span>DOSSIER</span>
+                                    </button>
+                                    <button onclick="bookHorseDirectly('${horse.name}')" 
+                                            class="w-full py-2.5 px-3 rounded-xl text-xs font-cinzel font-bold tracking-wider text-obsidian-950 bg-gradient-to-r from-gold-300 to-gold-500 hover:from-gold-200 hover:to-gold-400 transition flex items-center justify-center gap-1.5 shadow-gold-glow">
+                                        <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+                                        <span>VIEWING</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            lucide.createIcons();
+        }
+
+        // --- 5. MODAL: CERTIFICATE OF PEDIGREE & SPECIFICATION ---
+        function openDetailModal(horseId) {
+            const horse = horsesData.find(h => h.id === horseId);
+            if (!horse) return;
+
+            const modal = document.getElementById('detailModal');
+            const box = document.getElementById('modalBox');
+            const body = document.getElementById('modalBody');
+
+            body.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <!-- Left Photo Column -->
+                    <div class="relative bg-obsidian-950 p-7 flex flex-col justify-between border-b md:border-b-0 md:border-r border-gold-500/20">
+                        <div>
+                            <div class="rounded-2xl overflow-hidden border border-gold-500/30 shadow-2xl mb-5">
+                                <img src="${horse.image}" alt="${horse.name}" class="w-full h-80 object-cover">
+                            </div>
+                            <span class="inline-block px-3.5 py-1 rounded-full text-[10px] font-cinzel font-bold border ${horse.badgeBorder} mb-2">${horse.statusBadge}</span>
+                            <h2 class="font-editorial text-3xl font-bold text-white">${horse.name}</h2>
+                            <p class="font-cinzel text-xs text-gold-400 mt-1 uppercase tracking-wider">${horse.breedThai}</p>
+                        </div>
+                        
+                        <div class="mt-6 pt-5 border-t border-stone-800 flex justify-between items-center">
+                            <div>
+                                <span class="font-cinzel text-[10px] text-stone-500 block uppercase">ACQUISITION VALUE</span>
+                                <span class="text-2xl font-bold gold-gradient-text font-cinzel">${formatPrice(horse.priceTHB)}</span>
+                            </div>
+                            <button onclick="bookHorseDirectly('${horse.name}')" class="px-6 py-2.5 bg-gradient-to-r from-gold-300 to-gold-500 text-obsidian-950 font-cinzel font-bold text-xs rounded-xl transition shadow-gold-glow">
+                                BOOK TRIAL RIDE
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right Pedigree & Health Dossier -->
+                    <div class="p-7 sm:p-9 space-y-6">
+                        <div>
+                            <h3 class="font-cinzel text-xs font-bold text-gold-400 tracking-[0.2em] uppercase mb-3">BIOMETRICS & ATTRIBUTES</h3>
+                            <div class="grid grid-cols-2 gap-3 text-xs">
+                                <div class="bg-obsidian-900/90 p-3 rounded-xl border border-stone-800">
+                                    <span class="text-stone-500 block text-[10px] uppercase font-cinzel">GENDER</span>
+                                    <strong class="text-white text-sm">${horse.gender}</strong>
+                                </div>
+                                <div class="bg-obsidian-900/90 p-3 rounded-xl border border-stone-800">
+                                    <span class="text-stone-500 block text-[10px] uppercase font-cinzel">AGE</span>
+                                    <strong class="text-white text-sm">${horse.age} ปี (Years)</strong>
+                                </div>
+                                <div class="bg-obsidian-900/90 p-3 rounded-xl border border-stone-800">
+                                    <span class="text-stone-500 block text-[10px] uppercase font-cinzel">HEIGHT</span>
+                                    <strong class="text-white text-sm">${horse.height}</strong>
+                                </div>
+                                <div class="bg-obsidian-900/90 p-3 rounded-xl border border-stone-800">
+                                    <span class="text-stone-500 block text-[10px] uppercase font-cinzel">COAT COLOR</span>
+                                    <strong class="text-white text-sm">${horse.color}</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pedigree Tree Box -->
+                        <div>
+                            <h3 class="font-cinzel text-xs font-bold text-gold-400 tracking-[0.2em] uppercase mb-3">CERTIFICATE OF PEDIGREE</h3>
+                            <div class="bg-obsidian-900/90 p-4 rounded-xl border border-gold-500/25 text-xs space-y-2.5">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-stone-400 font-cinzel text-[11px]">SIRE (พ่อพันธุ์):</span>
+                                    <strong class="text-gold-200">${horse.sire}</strong>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-stone-400 font-cinzel text-[11px]">DAM (แม่พันธุ์):</span>
+                                    <strong class="text-gold-200">${horse.dam}</strong>
+                                </div>
+                                <div class="flex justify-between items-center pt-2 border-t border-stone-800">
+                                    <span class="text-stone-400 font-cinzel text-[11px]">REGISTRY:</span>
+                                    <span class="text-emerald-400 font-semibold">${horse.pedigree}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Health & Veterinary Checks -->
+                        <div>
+                            <h3 class="font-cinzel text-xs font-bold text-gold-400 tracking-[0.2em] uppercase mb-3">VETERINARY CLEARANCE</h3>
+                            <ul class="text-xs space-y-2 text-stone-300">
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                                    <span>EIA COGGINS TEST: <strong class="text-emerald-400">${horse.coggins}</strong></span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="heart-pulse" class="w-4 h-4 text-gold-400 shrink-0"></i>
+                                    <span>TEMPERAMENT: <strong>${horse.temperament}</strong></span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="user-check" class="w-4 h-4 text-gold-400 shrink-0"></i>
+                                    <span>RECOMMENDED RIDER: <strong>${horse.skillLevel}</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Trainer Note -->
+                        <div class="bg-gold-500/10 border-l-4 border-gold-400 p-4 rounded-r-xl text-xs text-stone-300">
+                            <strong class="text-gold-300 font-cinzel uppercase">HEAD TRAINER'S DOSSIER:</strong>
+                            <p class="mt-1 font-light leading-relaxed">${horse.description}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                box.classList.remove('scale-95');
+                box.classList.add('scale-100');
+            }, 10);
+            lucide.createIcons();
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('detailModal');
+            const box = document.getElementById('modalBox');
+            modal.classList.add('opacity-0');
+            box.classList.add('scale-95');
+            box.classList.remove('scale-100');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // --- 6. WISHLIST MANAGEMENT ---
+        function toggleWishlist(horseId, event) {
+            if (event) event.stopPropagation();
+            const horse = horsesData.find(h => h.id === horseId);
+            if (!horse) return;
+
+            const index = wishlist.findIndex(item => item.id === horseId);
+            if (index > -1) {
+                wishlist.splice(index, 1);
+                showToast("REMOVED", `นำ ${horse.name} ออกจากพอร์ตโฟลิโอของคุณแล้ว`);
+            } else {
+                wishlist.push(horse);
+                showToast("PORTFOLIO ADDED", `เพิ่ม ${horse.name} เข้ารายการโปรดแล้ว`);
+            }
+
+            localStorage.setItem('royalEquineWishlist', JSON.stringify(wishlist));
+            updateWishlistBadges();
+            renderHorses();
+            renderWishlistDrawerItems();
+        }
+
+        function updateWishlistBadges() {
+            const badge = document.getElementById('wishlistCountBadge');
+            const count = wishlist.length;
+            document.getElementById('drawerCount').textContent = count;
+
+            if (count > 0) {
+                badge.textContent = count;
+                badge.classList.remove('scale-0');
+                badge.classList.add('scale-100');
+            } else {
+                badge.classList.remove('scale-100');
+                badge.classList.add('scale-0');
+            }
+        }
+
+        function toggleWishlistDrawer(show) {
+            const drawer = document.getElementById('wishlistDrawer');
+            const overlay = document.getElementById('drawerOverlay');
+
+            if (show) {
+                renderWishlistDrawerItems();
+                drawer.classList.remove('translate-x-full');
+                overlay.classList.remove('hidden');
+                setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+            } else {
+                drawer.classList.add('translate-x-full');
+                overlay.classList.add('opacity-0');
+                setTimeout(() => overlay.classList.add('hidden'), 300);
+            }
+        }
+
+        function renderWishlistDrawerItems() {
+            const list = document.getElementById('drawerItemList');
+            if (wishlist.length === 0) {
+                list.innerHTML = `
+                    <div class="text-center py-16 text-stone-500">
+                        <i data-lucide="heart-off" class="w-10 h-10 mx-auto mb-3 opacity-40"></i>
+                        <p class="font-cinzel text-xs text-stone-400">NO HORSES SELECTED</p>
+                        <p class="text-[11px] text-stone-600 mt-1">กดไอคอนหัวใจที่การ์ดม้าเพื่อเลือกม้าที่คุณต้องการนัดเข้าชม</p>
+                    </div>
+                `;
+            } else {
+                list.innerHTML = wishlist.map(h => `
+                    <div class="flex items-center gap-3.5 p-3.5 bg-obsidian-900 rounded-xl border border-stone-800">
+                        <img src="${h.image}" alt="${h.name}" class="w-16 h-16 rounded-lg object-cover">
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-editorial text-sm font-bold text-white truncate">${h.name}</h4>
+                            <p class="font-cinzel text-[10px] text-gold-400 uppercase">${h.breed}</p>
+                            <p class="font-cinzel text-xs font-bold gold-gradient-text mt-1">${formatPrice(h.priceTHB)}</p>
+                        </div>
+                        <button onclick="toggleWishlist(${h.id})" class="p-1.5 text-stone-500 hover:text-red-400 rounded-lg">
+                            <i data-lucide="trash-2" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                `).join('');
+            }
+            lucide.createIcons();
+        }
+
+        function clearWishlist() {
+            wishlist = [];
+            localStorage.setItem('royalEquineWishlist', JSON.stringify(wishlist));
+            updateWishlistBadges();
+            renderWishlistDrawerItems();
+            renderHorses();
+            showToast("CLEARED", "ล้างรายการม้าทั้งหมดแล้ว");
+        }
+
+        function proceedToBookingWithWishlist() {
+            toggleWishlistDrawer(false);
+            if (wishlist.length > 0) {
+                const note = document.getElementById('custNote');
+                const names = wishlist.map(h => h.name).join(', ');
+                note.value = `สนใจนัดดูม้าจำนวน ${wishlist.length} ตัว ได้แก่: ${names}`;
+                window.location.hash = 'contact';
+                showToast("DOSSIER READY", `นำรายชื่อม้า ${wishlist.length} ตัวใส่ในฟอร์มนัดหมายแล้ว`);
+            } else {
+                window.location.hash = 'contact';
+            }
+        }
+
+        function bookHorseDirectly(horseName) {
+            closeModal();
+            const select = document.getElementById('horseInterestedSelect');
+            let found = false;
+            for (let i = 0; i < select.options.length; i++) {
+                if (select.options[i].value.includes(horseName)) {
+                    select.selectedIndex = i;
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                document.getElementById('custNote').value = `สนใจนัดดูม้า: ${horseName}`;
+            }
+            window.location.hash = 'contact';
+            showToast("HORSE SELECTED", `ระบุ ${horseName} ในแบบฟอร์มนัดหมายเรียบร้อย`);
+        }
+
+        function showToast(title, message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastTitle').textContent = title;
+            document.getElementById('toastMessage').textContent = message;
+
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3500);
+        }
+
+        function filterByQuickBreed(breedName) {
+            document.getElementById('breedFilter').value = breedName;
+            currentFilter.breed = breedName;
+            currentFilter.category = 'all';
+            
+            document.querySelectorAll('.category-chip').forEach(c => {
+                c.classList.remove('bg-gold-500', 'text-obsidian-950', 'border-gold-400', 'font-bold');
+                c.classList.add('bg-obsidian-950', 'text-stone-300', 'border-stone-800');
+            });
+
+            renderHorses();
+            document.getElementById('horse-catalog').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function resetAllFilters() {
+            currentFilter = {
+                search: '',
+                breed: 'all',
+                discipline: 'all',
+                category: 'all',
+                sort: 'default'
+            };
+            document.getElementById('searchInput').value = '';
+            document.getElementById('breedFilter').value = 'all';
+            document.getElementById('disciplineFilter').value = 'all';
+            document.getElementById('sortFilter').value = 'default';
+            
+            document.querySelectorAll('.category-chip').forEach((c, idx) => {
+                if (idx === 0) {
+                    c.classList.add('bg-gold-500', 'text-obsidian-950', 'border-gold-400', 'font-bold');
+                    c.classList.remove('bg-obsidian-950', 'text-stone-300', 'border-stone-800');
+                } else {
+                    c.classList.remove('bg-gold-500', 'text-obsidian-950', 'border-gold-400', 'font-bold');
+                    c.classList.add('bg-obsidian-950', 'text-stone-300', 'border-stone-800');
+                }
+            });
+
+            renderHorses();
+        }
+
+        // --- 7. INITIALIZATION ---
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSavedDossier();
+            renderHorses();
+            updateWishlistBadges();
+
+            document.getElementById('searchInput').addEventListener('input', (e) => {
+                currentFilter.search = e.target.value.trim();
+                renderHorses();
+            });
+
+            document.getElementById('breedFilter').addEventListener('change', (e) => {
+                currentFilter.breed = e.target.value;
+                renderHorses();
+            });
+
+            document.getElementById('disciplineFilter').addEventListener('change', (e) => {
+                currentFilter.discipline = e.target.value;
+                renderHorses();
+            });
+
+            document.getElementById('sortFilter').addEventListener('change', (e) => {
+                currentFilter.sort = e.target.value;
+                renderHorses();
+            });
+
+            document.getElementById('resetFilterBtn').addEventListener('click', resetAllFilters);
+
+            document.querySelectorAll('.category-chip').forEach(chip => {
+                chip.addEventListener('click', () => {
+                    document.querySelectorAll('.category-chip').forEach(c => {
+                        c.classList.remove('bg-gold-500', 'text-obsidian-950', 'border-gold-400', 'font-bold');
+                        c.classList.add('bg-obsidian-950', 'text-stone-300', 'border-stone-800');
+                    });
+                    chip.classList.add('bg-gold-500', 'text-obsidian-950', 'border-gold-400', 'font-bold');
+                    chip.classList.remove('bg-obsidian-950', 'text-stone-300', 'border-stone-800');
+
+                    currentFilter.category = chip.getAttribute('data-category');
+                    renderHorses();
+                });
+            });
+
+            document.getElementById('openWishlistBtn').addEventListener('click', () => {
+                toggleWishlistDrawer(true);
+            });
+
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            });
+
+            document.getElementById('bookingForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('custName').value;
+                const phone = document.getElementById('custPhone').value;
+                const date = document.getElementById('visitDate').value;
+                const horse = document.getElementById('horseInterestedSelect').value;
+
+                alert(`เรียน คุณ${name}\n\nRoyal Equine Estate ได้รับคำขอนัดหมาย Private Viewing สำหรับ (${horse}) ในวันที่ ${date} เรียบร้อยแล้ว\n\nฝ่ายบริการลูกค้าสัมพันธ์ระดับสูงจะโทรศัพท์ติดต่อกลับที่ ${phone} เพื่อจัดส่งเอกสารยืนยันและพิกัดแผนที่เดินทางแบบ VIP ครับ`);
+
+                e.target.reset();
+            });
+
+            document.getElementById('detailModal').addEventListener('click', (e) => {
+                if (e.target.id === 'detailModal') {
+                    closeModal();
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    closeModal();
+                    toggleWishlistDrawer(false);
+                }
+            });
+
+            lucide.createIcons();
+        });
+    </script>
 </body>
 </html>
